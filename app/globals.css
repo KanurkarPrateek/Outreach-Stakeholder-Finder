@@ -1,0 +1,271 @@
+:root {
+  --bg: #0b0f19;
+  --panel: #131a2a;
+  --border: #243049;
+  --text: #e6edf7;
+  --muted: #93a1bd;
+  --accent: #4f8cff;
+  --accent-hover: #3d78ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 6px;
+}
+
+.sub {
+  color: var(--muted);
+  margin: 0 0 28px;
+  font-size: 14px;
+}
+
+.searchbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+input[type='text'] {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+}
+
+input[type='text']:focus {
+  border-color: var(--accent);
+}
+
+button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--panel);
+}
+
+.tagsblock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 0 14px;
+}
+
+.taglabel {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tagsinput {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  cursor: text;
+  min-height: 46px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #1c2740;
+  border: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.chipx {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+}
+
+.chipx:hover {
+  color: #ffb4c4;
+  background: none;
+}
+
+.taginput {
+  flex: 1;
+  min-width: 180px;
+  border: none !important;
+  background: transparent !important;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  padding: 4px 2px;
+}
+
+.keyrow {
+  margin: -6px 0 18px;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+  background: none;
+}
+
+.keyfield {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.keyfield input {
+  width: 100%;
+}
+
+.keyhint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 0 10px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.error {
+  background: #2a1620;
+  border: 1px solid #5a2436;
+  color: #ffb4c4;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #1c2740;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.empty {
+  color: var(--muted);
+  padding: 28px 4px;
+  font-size: 14px;
+}
+
+.note {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
